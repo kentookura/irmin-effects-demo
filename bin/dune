@@ -1,4 +1,10 @@
 (executable
  (public_name irmin_effects_demo)
  (name main)
- (libraries irmin_effects_demo))
+ (preprocess (pps lwt_ppx))
+ (libraries irmin_effects_demo irmin-fs.unix asai eio_main lwt lwt_eio))
+
+(env
+ (dev
+  (flags
+   (:standard -w -66-32-33-27-26-69-37))))
