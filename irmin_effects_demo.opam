@@ -12,6 +12,12 @@ bug-reports: "https://github.com/username/reponame/issues"
 depends: [
   "ocaml"
   "dune" {>= "3.15"}
+  "lwt"
+  "lwt_eio"
+  "eio_main"
+  "asai"
+  "irmin"
+  "irmin-fs"
   "odoc" {with-doc}
 ]
 build: [

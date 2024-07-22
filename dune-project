@@ -19,7 +19,15 @@
  (name irmin_effects_demo)
  (synopsis "A short synopsis")
  (description "A longer description")
- (depends ocaml dune)
+ (depends 
+   ocaml
+   dune
+   lwt
+   lwt_eio
+   eio_main
+   asai
+   irmin
+   irmin-fs)
  (tags
   (topics "to describe" your project)))
 
