@@ -1,0 +1,4 @@
+(executable
+ (public_name irmin_effects_demo)
+ (name main)
+ (libraries irmin_effects_demo))

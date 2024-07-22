@@ -1,0 +1,2 @@
+(test
+ (name test_irmin_effects_demo))

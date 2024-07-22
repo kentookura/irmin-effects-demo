@@ -1,0 +1,2 @@
+(library
+ (name irmin_effects_demo))
