@@ -11,8 +11,9 @@ doc: "https://url/to/documentation"
 bug-reports: "https://github.com/username/reponame/issues"
 depends: [
   "ocaml"
-  "dune" {>= "3.15"}
+  "dune" {>= "3.7"}
   "lwt"
+  "lwt_ppx"
   "lwt_eio"
   "eio_main"
   "asai"
@@ -35,3 +36,8 @@ build: [
   ]
 ]
 dev-repo: "git+https://github.com/username/reponame.git"
+pin-depends: [
+  ["irmin.dev" "git+https://github.com/mirage/irmin#cb4bc90d68a6003e5b484aff527c21d34a148738"]
+  ["irmin-fs.dev" "git+https://github.com/mirage/irmin#cb4bc90d68a6003e5b484aff527c21d34a148738"]
+  ["ppx_irmin.dev" "git+https://github.com/mirage/irmin#cb4bc90d68a6003e5b484aff527c21d34a148738"]
+]

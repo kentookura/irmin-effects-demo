@@ -1,4 +1,4 @@
-(lang dune 3.15)
+(lang dune 3.7)
 
 (name irmin_effects_demo)
 
@@ -23,6 +23,7 @@
    ocaml
    dune
    lwt
+   lwt_ppx
    lwt_eio
    eio_main
    asai
@@ -30,5 +31,3 @@
    irmin-fs)
  (tags
   (topics "to describe" your project)))
-
-; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project

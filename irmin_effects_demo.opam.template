@@ -1,0 +1,5 @@
+pin-depends: [
+  ["irmin.dev" "git+https://github.com/mirage/irmin#cb4bc90d68a6003e5b484aff527c21d34a148738"]
+  ["irmin-fs.dev" "git+https://github.com/mirage/irmin#cb4bc90d68a6003e5b484aff527c21d34a148738"]
+  ["ppx_irmin.dev" "git+https://github.com/mirage/irmin#cb4bc90d68a6003e5b484aff527c21d34a148738"]
+]
