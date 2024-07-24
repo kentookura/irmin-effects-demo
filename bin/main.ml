@@ -16,13 +16,11 @@ module Term = Asai.Tty.Make (Reporter.Message)
 
 let test () =
   let config = Irmin_fs.config "store" in
+  (* The error occurs here: *)
   let repo = Store.Repo.v config in
   let main = Store.main repo in
   let info () = Store.Info.v 0L in
   let key = "Hello" in
-  (* Eio.Switch.run @@ fun sw -> *)
-  (* Eio.Fiber.fork ~sw (fun () -> *)
-  (*     Reporter.fatalf Hello "I now fail with Unhandled!"); *)
   let () =
     match Store.set main [ key ] ~info "world!" with
     | _ ->
@@ -34,8 +32,4 @@ let test () =
 
 let () =
   Reporter.run ~emit:Term.display ~fatal:Term.display @@ fun () ->
-  Eio_main.run @@ fun env ->
-  let path = Eio.Path.(env#cwd / "store") in
-  test ()
-(* let clock = Eio.Stdenv.clock env in *)
-(* test ~path ~clock *)
+  Eio_main.run @@ fun env -> test ()
